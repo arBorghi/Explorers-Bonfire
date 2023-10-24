@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "explorers-bonfire",
+	"version": "${version}",
+	"name": "Explorers' Bonfire",
+	"description": "A more forgiving respawn system: After your death, you will be able to spawn in the nearest campfire",
+	"authors": [
+		"Furin"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/explorers-bonfire/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "net.furin.explorersbonfire.ExplorersBonfire",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "net.furin.explorersbonfire.ExplorersBonfireDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"explorers-bonfire.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.23",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.10"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
